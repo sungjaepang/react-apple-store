@@ -1,0 +1,47 @@
+
+
+/* 26.03.19 .start (애플느낌 핵심) */
+/* 버튼 스타일 추가 */
+button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.btnBlock {
+  text-decoration: unset;
+}
+.cartBtn {
+  width: 140px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgb(0,102,204);   /* #0066cc */
+  color: #fff;
+}
+/* 26.03.19 .end */
+
+.cart-btn,
+.cartBtn {
+    background: #0071e3;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 999px;
+    border: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+.cartBtn:hover {
+  background: #005bb5;
+  transform: translateY(-1px);
+}
+
+
+
+/* --------------------------------- HEADER --------------------------------- */
+/* 26.03.23 .start (애플스타일 느낌 추가)*/
+.header {
+    padding: 24px 40px;
+}
+/* 26.03.23 .end */

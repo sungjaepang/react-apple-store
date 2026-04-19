@@ -4,7 +4,7 @@ function Cart({ cart, setCart }) {
         setCart(newCart)
     }
     return (
-        <div className="cart">
+        <div className="cart-page">
             <h1>장바구니</h1>
             {cart.length === 0 ? (
                 <p>장바구니가 비어있습니다.</p>

@@ -6,6 +6,10 @@
   gap:40px;
   padding:80px;
 } /* 이후 Product Grid 반응형 @media (query) 추가 */
+.product-grid > a {
+  text-decoration: unset;
+  color: #111;
+}
 
 .product-card {
   text-align:center;
@@ -21,6 +25,16 @@
   border-radius:20px;
 }
 /* 26.03.13 .end */
+/* 26.04.19 .start */
+  /* 👉🏼스타일 문제로 폐기 */
+      /* .product-card img {
+        transition: transform 0.4s;
+      }
+
+      .product-card:hover img {
+        transform: scale(1.05);
+      } */
+/* 26.04.19 .end */
 
 
 /* 26.03.19 .start (애플느낌 핵심) */
@@ -42,25 +56,16 @@
 .info h1 {
   font-size: 40px;
   margin-bottom: 20px;
+  line-height: 1.0;
 }
 .info p {
   font-size: 24px;
   color: #555;
 }
 
-/* 버튼 스타일 추가 */
-button {
-  margin-top: 20px;
-  padding: 15px 30px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
 
 /* ------... 이동버튼 추가? */
 .cart {
-  padding: 80px;
 } /* 이후 Cart 반응형 @media (query) 추가 */
 .cart-item {
   display: flex;
@@ -72,6 +77,13 @@ button {
   width: 120px;
   border-radius: 10px;
 }
+.cart-page {
+  padding: 80px;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
 
 /* 26.03.19 .end */
 
@@ -79,24 +91,22 @@ button {
 
 /* 26.03.23 .start (애플스타일 느낌 추가)*/
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px 40px;
-  background: #000;
-  color: #fff;
+    background: #111;
+    color: #fff;
 } /* 이후 Header 반응형 @media (query) 추가 */
+
+/* .cart { */
+.header .cart {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
 
 .logo {
   font-size: 20px;
   text-decoration: none;
-  color: white;
-}
-
-.cart {
- text-decoration: none;
- color: white;
- font-size: 16px;
+  color: #fff;
 }
 /* 26.03.23 .end */
 
