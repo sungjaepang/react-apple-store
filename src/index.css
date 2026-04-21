@@ -1,3 +1,31 @@
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --subtext: #6e6e73;
+  --line: #e5e5e7;
+  --accent: #0071e3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* background: var(--bg); */
+  background: #f5f5f7;
+  /* color: var(--text); */
+  color: #1d1d1f;
+}
+
+
+
+/* ------------------------------------------------------------------- */
+
+
 
 /* 26.03.13 .start */
 .product-grid {
@@ -12,10 +40,9 @@
 }
 
 .product-card {
-  text-align:center;
-  transition:transform 0.3s;
+  /* background: var(--surface); */
+  background: #fff;
 }
-
 .product-card:hover {
   transform:scale(1.05);
 }
@@ -90,20 +117,23 @@
 
 
 /* 26.03.23 .start (애플스타일 느낌 추가)*/
-.header {
+/* .header { */
+.site-header {
   padding: 20px 40px;
     background: #111;
     color: #fff;
 } /* 이후 Header 반응형 @media (query) 추가 */
 
 /* .cart { */
-.header .cart {
+/* .header .cart { */
+.site-header .cart-link {
   text-decoration: none;
   color: #fff;
   font-size: 16px;
 }
 
-.logo {
+/* .logo { */
+.site-logo {
   font-size: 20px;
   text-decoration: none;
   color: #fff;
@@ -112,6 +142,84 @@
 
 
 
+
+
+
+.cart-btn,
+.cartBtn,
+.primary-btn {
+    background: #0071e3;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+
+
+
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  /* border-inline: 1px solid var(--border); */
+  border-inline: 1px solid #e5e4e7;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  /* font-family: var(--heading); */
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+  /* color: var(--text-h); */
+  color: #08060d;
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  /* font-family: var(--mono); */
+  font-family: ui-monospace, Consolas, monospace;
+  display: inline-flex;
+  border-radius: 4px;
+  /* color: var(--text-h); */
+  color: #08060d;
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  /* background: var(--code-bg); */
+  background: #f4f3ec;
+}
+/* ------------------------------ 반응형 CSS ------------------------------------- */
 
 
 :root {
@@ -166,75 +274,10 @@
   }
 }
 
-body {
-  margin: 0;
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
 
 
 
-
-
-
-
-
-
-
+/* ------------------------------ 반응형 CSS ------------------------------------- */
 /* 26.03.23 (Product Grid 반응형 --  맨 아래에 위치 고정)*/
 /* 태블릿 */
 @media (max-width: 1024px) {
@@ -242,51 +285,75 @@ code {
     grid-template-columns: repeat(2, 1fr);
     padding: 40px;
   }
+  
+  .detail {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info {
+    width: 100%;
+  }
 }
+
+
 /* 모바일 */
 @media (max-width: 768px) {
   .product-grid {
     grid-template-columns: 1fr;
     padding: 20px;
   }
-}
-
-/* (Header 반응형) */
-/* 모바일 */
-@media (max-width: 768px) {
-  .header {
-    padding: 15px 20px;
+  
+  /* (Header 반응형) */
+  /* .header { */
+  .site-header {
+    height: 56px;
+    /* padding: 15px 20px; */
+    padding: 0 20px;
   }
   
-  .logo {
+  /* .logo { */
+  .site-logo {
     font-size: 16px;
   }
 
-  .cart {
-    font-size: 14px;
+  .hero-section {
+    padding: 56px 20px 36px;
   }
-}
 
-/* (Product Detail 반응형) */
-/* 모바일 */
-@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 32px;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+  }
+  
+  /* (Product Detail 반응형) */
   .detail {
     flex-direction: column;
-    padding: 20px;
+    /* padding: 20px; */
+    padding: 40px 20px 56px;
   }
   .detail img {
     width: 100%;
   }
   .info h1 {
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 28px;
   }
-}
-
-/* (Cart 반응형) */
-/* 모바일 */
-@media (max-width: 768px) {
-  .cart {
+  .info p {
+    font-size: 18px;
+  }
+  
+  /* (Cart 반응형) */
+  /* .cart { */
+  .cart-link {
+    font-size: 14px;
     padding: 20px;
+  }
+  .cart-page {
+    padding: 40px 20px 56px;
   }
   .cart-item {
     flex-direction: column;
@@ -294,5 +361,6 @@ code {
   }
   .cart-item img {
     width: 100%;
+    height: auto;
   }
 }
