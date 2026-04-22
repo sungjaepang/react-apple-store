@@ -18,9 +18,10 @@ p {
 /* --------------------------------- HEADER --------------------------------- */
 /* 26.03.23 .start*/
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /* 26.03.23 .end*/
 
